@@ -13,14 +13,14 @@ public class hogwarts {
 
     public void compareHogwartsStudent(hogwarts student) {
         if (comparePower(student)) {
-            System.out.println(String.format("%s обладает бОльшей мощностью магии, чем %s",this, student));
+            System.out.println(String.format("%s обладает бОльшей мощностью магии, чем %s", this, student));
         } else {
-            System.out.println(String.format("%s обладает бОльшей мощностью магии, чем %s",student,this));
+            System.out.println(String.format("%s обладает бОльшей мощностью магии, чем %s", student, this));
         }
     }
 
     private boolean comparePower(hogwarts student) {
-        return transgression + magicPower  > student.transgression + student.magicPower;
+        return transgression + magicPower > student.transgression + student.magicPower;
     }
 
     public String getName() {

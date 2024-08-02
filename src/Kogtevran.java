@@ -10,17 +10,22 @@ public class Kogtevran extends hogwarts {
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
-}
+    }
+
     public void compareKogtevranStudent(Kogtevran student) {
         if (comparePower(student)) {
-            System.out.println(String.format("%s лучший Когтевран, чем %s",this, student));
+            System.out.println(String.format("%s лучший Когтевран, чем %s", this, student));
         } else {
-            System.out.println(String.format("%s лучший Когтевран, чем %s",student,this));
+            System.out.println(String.format("%s лучший Когтевран, чем %s", student, this));
         }
     }
 
     private boolean comparePower(Kogtevran student) {
-        return smart + wise + witty> student.smart + student.wise + student.witty;
+        return smart + wise + witty > student.smart + student.wise + student.witty;
+    }
+
+    void printStats() {
+        System.out.println(StringFullName());
     }
 
     public int getSmart() {
@@ -71,6 +76,7 @@ public class Kogtevran extends hogwarts {
                 ", magicPower=" + magicPower +
                 '}';
     }
+
     @Override
     public String toString() {
         return name;

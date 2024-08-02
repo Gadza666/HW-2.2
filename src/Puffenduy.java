@@ -11,16 +11,21 @@ public class Puffenduy extends hogwarts {
         this.loyal = loyal;
         this.honest = honest;
     }
+
     public void comparePuffenduyStudent(Puffenduy student) {
         if (comparePower(student)) {
-            System.out.println(String.format("%s лучший ПуффендуЙ, чем %s",this, student));
+            System.out.println(String.format("%s лучший ПуффендуЙ, чем %s", this, student));
         } else {
-            System.out.println(String.format("%s лучший ПуффендуЙ, чем %s",student,this));
+            System.out.println(String.format("%s лучший ПуффендуЙ, чем %s", student, this));
         }
     }
 
     private boolean comparePower(Puffenduy student) {
         return hardworking + loyal + honest > student.hardworking + student.loyal + student.honest;
+    }
+
+    void printStats() {
+        System.out.println(StringFullName());
     }
 
     public int getHardworking() {

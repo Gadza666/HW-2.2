@@ -14,14 +14,18 @@ public class Griffendor extends hogwarts {
 
     public void compareGriffendorStudent(Griffendor student) {
         if (comparePower(student)) {
-            System.out.println(String.format("%s лучший Гриффиндорец, чем %s",this, student));
+            System.out.println(String.format("%s лучший Гриффиндорец, чем %s", this, student));
         } else {
-            System.out.println(String.format("%s лучший Гриффиндорец, чем %s",student,this));
+            System.out.println(String.format("%s лучший Гриффиндорец, чем %s", student, this));
         }
     }
 
     private boolean comparePower(Griffendor student) {
         return nobility + honor + courage > student.nobility + student.honor + student.courage;
+    }
+
+    void printStats() {
+        System.out.println(StringFullName());
     }
 
     public int getNobility() {

@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Sliseren extends hogwarts{
+public class Sliseren extends hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -15,16 +15,21 @@ public class Sliseren extends hogwarts{
         this.resourcefulness = resourcefulness;
         this.trustForPower = trustForPower;
     }
+
     public void compareSliserenStudent(Sliseren student) {
         if (comparePower(student)) {
-            System.out.println(String.format("%s лучший Слизериновец, чем %s",this, student));
+            System.out.println(String.format("%s лучший Слизериновец, чем %s", this, student));
         } else {
-            System.out.println(String.format("%s лучший Слизериновец, чем %s",student,this));
+            System.out.println(String.format("%s лучший Слизериновец, чем %s", student, this));
         }
     }
 
     private boolean comparePower(Sliseren student) {
-        return cunning+ determination+ambition+resourcefulness+trustForPower > student.cunning + student.determination + student.ambition + student.resourcefulness + student.trustForPower;
+        return cunning + determination + ambition + resourcefulness + trustForPower > student.cunning + student.determination + student.ambition + student.resourcefulness + student.trustForPower;
+    }
+
+    void printStats() {
+        System.out.println(StringFullName());
     }
 
     public int getCunning() {
@@ -93,6 +98,7 @@ public class Sliseren extends hogwarts{
                 ", magicPower=" + magicPower +
                 '}';
     }
+
     @Override
     public String toString() {
         return name;
